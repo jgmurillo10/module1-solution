@@ -11,7 +11,7 @@
     </style>
   </head>
 <body>
-   <div class="container" ng-controller="LunchCheckController">
+   <div class="container jumbotron" ng-controller="LunchCheckController">
      <h1>Lunch Checker</h1>
 
          <div class="form-group">
@@ -28,8 +28,17 @@
          <div class="form-group message" ng-style="messageStyle"">
            <!-- Your message can go here. -->
            {{message}}
+            <div ng-show="totalItems">The number of items are {{totalItems}}</div>
          </div>
    </div>
-    
+    <footer class="panel-footer">
+      Note:  empty items like the following does not take into account
+      <br>
+      <ul class="list-group">
+        <li class="list-group-item">',,'</li>
+        <li class="list-group-item">', ,'</li>
+      </ul>
+       
+    </footer>
 </body> 
 </html>
